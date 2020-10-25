@@ -21,7 +21,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 html {
   background-color: #fef8ec;
@@ -32,10 +33,10 @@ html {
 .hello {
   color: #0095a8;
   text-align: center;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Varela Round', sans-serif;
   font-size: 4rem;
   margin: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 18rem;
 }
 .card {
   width: 50%;

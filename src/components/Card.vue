@@ -21,8 +21,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-
 .container {
   background-color: #0095a8;
   text-align: center;
@@ -39,13 +37,13 @@ export default defineComponent({
   }
   .name {
     color: #ffffff;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 1.5rem;
     margin: auto 0 auto 1rem;
   }
 }
 .introduce {
   color: #ffffff;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 </style>
