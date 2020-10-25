@@ -36,7 +36,7 @@ html {
   font-family: 'Varela Round', sans-serif;
   font-size: 4rem;
   margin: 0;
-  margin-bottom: 18rem;
+  margin-bottom: 15rem;
 }
 .card {
   width: 50%;
