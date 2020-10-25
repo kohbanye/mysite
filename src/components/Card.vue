@@ -5,7 +5,9 @@
       <p :class="$style.name">Koh Sakano</p>
     </div>
     <p :class="$style.introduce">
-      こんにちは。楽しく生きてます。
+      こんにちは。
+      <br />
+      楽しく生きてます。
     </p>
   </div>
 </template>
@@ -45,5 +47,20 @@ export default defineComponent({
 .introduce {
   color: #ffffff;
   font-family: 'Kosugi Maru', sans-serif;
+}
+
+@media screen and (min-width: 960px) {
+  br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .me {
+    margin-left: 0;
+    .icon {
+      max-height: 3rem;
+    }
+  }
 }
 </style>
