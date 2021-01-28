@@ -46,7 +46,6 @@ export default defineComponent({
 }
 .introduce {
   color: #ffffff;
-  font-family: 'Kosugi Maru', sans-serif;
 }
 
 @media screen and (min-width: 960px) {
