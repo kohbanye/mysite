@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Index from '@/pages/Index.vue'
 
 export const routerHistory = createWebHistory()
 
@@ -7,7 +6,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    component: () => import('@/pages/Index.vue')
+  },
+  {
+    path: '/play',
+    name: 'play',
+    component: () => import('@/pages/Play.vue')
   }
 ]
 

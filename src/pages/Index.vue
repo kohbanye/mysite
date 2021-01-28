@@ -1,6 +1,11 @@
 <template>
   <div :class="$style.container">
     <h1 :class="$style.hello">Hello.</h1>
+    <div :class="$style.logo">
+      <router-link to="/play">
+        <img src="@/assets/game.svg" />
+      </router-link>
+    </div>
     <card :class="$style.card" />
   </div>
 </template>
@@ -30,7 +35,11 @@ export default defineComponent({
   font-family: 'Varela Round', sans-serif;
   font-size: 4rem;
   margin: 0;
-  margin-bottom: 15rem;
+  margin-bottom: 6rem;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 6rem;
 }
 .card {
   width: 50%;
