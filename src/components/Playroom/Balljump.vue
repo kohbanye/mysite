@@ -47,6 +47,7 @@ export default defineComponent({
 
 <style lang="scss" module>
 .container {
+  touch-action: manipulation;
   width: 100vw;
   max-width: 800px;
   height: 100vh;

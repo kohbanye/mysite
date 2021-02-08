@@ -20,21 +20,41 @@ export const game = (
   let vy = 0
   const g = 0.6
 
-  const onClick = (e: MouseEvent) => {
-    let clickX = e.clientX
-    let clickY = e.clientY
-    if (window.innerWidth >= 800) {
-      clickX -= window.innerWidth / 2 - 400
+  if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+    const onTouch = (e: TouchEvent) => {
+      let clickX = e.touches[0].clientX
+      let clickY = e.touches[0].clientY
+      if (window.innerWidth >= 800) {
+        clickX -= window.innerWidth / 2 - 400
+      }
+      if (window.innerHeight >= 700) {
+        clickY -= window.innerHeight / 2 - 350
+      }
+      const k =
+        0.1 *
+        Math.sqrt((x - clickX) * (x - clickX) + (y - clickY) * (y - clickY))
+      vx = (x - clickX) / k
+      vy = (y - clickY) / k
     }
-    if (window.innerHeight >= 700) {
-      clickY -= window.innerHeight / 2 - 350
+    canvas.addEventListener('touchstart', onTouch)
+  } else {
+    const onClick = (e: MouseEvent) => {
+      let clickX = e.clientX
+      let clickY = e.clientY
+      if (window.innerWidth >= 800) {
+        clickX -= window.innerWidth / 2 - 400
+      }
+      if (window.innerHeight >= 700) {
+        clickY -= window.innerHeight / 2 - 350
+      }
+      const k =
+        0.1 *
+        Math.sqrt((x - clickX) * (x - clickX) + (y - clickY) * (y - clickY))
+      vx = (x - clickX) / k
+      vy = (y - clickY) / k
     }
-    const k =
-      0.1 * Math.sqrt((x - clickX) * (x - clickX) + (y - clickY) * (y - clickY))
-    vx = (x - clickX) / k
-    vy = (y - clickY) / k
+    canvas.addEventListener('click', onClick)
   }
-  canvas.addEventListener('click', onClick)
 
   const drawTimer = (start: number) => {
     ctx.fillStyle = '#ffffff'
